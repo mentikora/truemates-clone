@@ -20,3 +20,21 @@
 		line-height: 100px;
 	}
 }
+
+.subheading{
+	text: {
+		transform: uppercase;
+		align: center;
+	}
+	font-weight: normal;
+	color: $color-white;
+
+	@media(max-width: $screen-lg-max){
+		font-size: 21px;
+		line-height: 25px;
+	}
+	@media(min-width: $screen-lg){
+		font-size: 40px;
+		line-height: 40px;
+	}
+}

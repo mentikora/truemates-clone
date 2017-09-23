@@ -119,8 +119,8 @@
 
 		/* list item */ 
 		li{
+			position: relative;
 			height: 52px;
-			margin-top: 5px;
 
 			font: {
 				weight: normal;
@@ -128,13 +128,39 @@
 			line-height: 52px;
 			color: $color-primary;
 			background-color: $portfolio-item-li-bgc;
+			border-top: 5px solid $color-primary;
 
 			transition: $transition;
-			transform: translateX(-110%);
-
-			&.active{
-				transform: translateX(0);				
+			
+			&:nth-child(1){
+				transform: translateY(-100%);	
+				z-index: 4;
+				&.active{
+					transform: translateY(0);	
+				}
 			}
+			&:nth-child(2){
+				transform: translateY(-200%);	
+				z-index: 3;
+				&.active{
+					transform: translateY(0%);	
+				}
+			}
+			&:nth-child(3){
+				transform: translateY(-300%);	
+				z-index: 2;
+				&.active{
+					transform: translateY(0%);	
+				}
+			}
+			&:nth-child(4){
+				transform: translateY(-400%);	
+				z-index: 1;
+				&.active{
+					transform: translateY(0%);	
+				}
+			}
+
 
 			@media(min-width: $screen-md) and (max-width: $screen-lg-max){
 				height: 35px;

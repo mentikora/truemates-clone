@@ -62,6 +62,24 @@
 		&--nivea-photo{
 			background-image: url('../dist/images/nivea-circle-photo.jpg');
 		}
+		
+		/* anson dots*/ 
+		&--anson-film{
+			background-image: url('../dist/images/anson-circle-film.jpg');
+		}
+		&--anson-photo{
+			background-image: url('../dist/images/anson-circle-photo.jpg');
+		}
+
+		/* ford dots */ 
+		&--ford-film{
+			background-image: url('../dist/images/ford-circle-film.jpg');
+		}
+		&--ford-content-pi{
+			background-image: url('../dist/images/ford-circle-content-pi.jpg');
+		}
+
+
 
 		@media(max-width: $screen-md-max){
 			display: none;

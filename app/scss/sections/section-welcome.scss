@@ -101,12 +101,17 @@
 	}
 
 	.side{
-		flex: 0 0 calc(100% / 3);
-
 		img{
+			//margin-top: -50px;
 			display: inline-block;
-			max-width: 60%;
+			max-width: 150px;
 			height: auto;
+		}
+
+		&--left{
+			@media(min-width: $screen-xl){
+				flex: 0 0 30%
+			}
 		}
 
 		&--middle{
@@ -116,11 +121,22 @@
 			}
 			@media(min-width: $screen-xl){
 				margin-top: -100px;
+				flex: 0 0 40%
 			}
 		}
 
 		&--right{
+			margin-top: -100px;
 			text-align: right;
+			background: {
+				image: url('../dist/images/iphone-rotating.jpg');
+				repeat: no-repeat;
+				position: calc(100% - 150px) 35%;
+			}
+
+			@media(min-width: $screen-xl){
+				flex: 0 0 30%
+			}
 		}
 	}
 }
@@ -148,11 +164,12 @@
 }
 
 .rotating{
-	//animation: rotating 4s linear infinite;
+	animation: rotating 4s linear infinite;
+	transform-origin: 50% 100%;
 }
 
 @keyframes rotating {
 	0% { transform: rotate(0deg); }
-  50% { transform: rotate(90deg); }
+  50% { transform: rotate(-90deg); }
   100% { transform: rotate(0deg); }
 }
