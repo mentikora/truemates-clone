@@ -89,20 +89,11 @@
 				@extend .heading;
 			}
 			&__text{
+				@extend .subheading;
+
 				margin: {
 					top: 0;
 					bottom: 10px;
-				}
-
-				text-transform: uppercase;
-				font-weight: normal;
-				@media(max-width: $screen-lg-max){
-					font-size: 21px;
-					line-height: 25px;
-				}
-				@media(min-width: $screen-lg){
-					font-size: 40px;
-					line-height: 40px;
 				}
 			}
 			.brush-font{
@@ -116,10 +107,10 @@
 			background-image: url('./images/nivea-slide-1.jpg');
 		}
 		.ps2{
-			background-image: url('./images/bookmark-1.jpg');
+			background-image: url('./images/anson-slide-1.jpg');
 		}
 		.ps3{
-			background-image: url('./images/jinx.jpg');
+			background-image: url('./images/ford-slide-1.jpg');
 		}
 		.ps4{
 			background-image: url('./images/portfolio-film.jpg');

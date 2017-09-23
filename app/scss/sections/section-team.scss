@@ -58,10 +58,13 @@
 	&__location,
 	&__name,
 	&__info{
+		width: 230px;
 		padding: {
 			left: 20px;
 			right: 20px;
 		}
+
+		box-sizing: border-box;
 	}
 
 	/* location*/
@@ -185,7 +188,7 @@
 			background-image: url('./images/team-lukas.png');
 		}
 		&--2{
-			background-image: url('./images/team-philip2.png');
+			background-image: url('./images/team-philip2.jpg');
 		}
 		&--3{
 			background-image: url('./images/team-sandro.png');
