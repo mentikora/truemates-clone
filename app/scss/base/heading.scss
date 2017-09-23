@@ -1,0 +1,22 @@
+.heading{
+	margin: {
+		top: 15px;
+		bottom: 15px;
+	}
+
+	text: {
+		transform: uppercase;
+		align: center;
+	}
+	font-weight: 900;
+	color: $color-white;
+
+	@media(max-width: $screen-lg-max){
+		font-size: 28px;
+		line-height: 35px;
+	}
+	@media(min-width: $screen-md){
+		font-size: 100px;
+		line-height: 100px;
+	}
+}

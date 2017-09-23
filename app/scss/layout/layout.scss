@@ -1,0 +1,109 @@
+html,
+body{
+  overflow-x: hidden;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+	
+	font: {
+		family: 'Lato';
+		weight: 300;
+	}
+}
+
+main.main-wrapper{
+  display: flex;
+  flex-direction: column; 
+  flex-grow: 1;
+}
+
+.container{
+  width: 90%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+/* customize scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  outline: 1px solid darkgray;
+} 
+
+/* font style */
+.text{
+  &--center{
+    text-align: center;
+  }
+} 
+
+/* visually hidden */
+.visually-hidden{
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
+
+/* clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+/* show/hide mobile */
+.mobile{
+  &--hide{
+    @media(min-width: $screen-xl){
+      display: block;
+    }
+    @media(max-width: $screen-xl-max){
+      display: none !important;
+    }
+  }
+  &--show{
+    @media(min-width: $screen-xl){
+      display: none;
+    }
+    @media(max-width: $screen-xl-max){
+      display: block !important;
+    }
+  }
+} 
+
+/* brush-font */
+.brush-font{
+  display: inline-block;
+  font-family: 'Northwell Swash';
+
+  @media(max-width: $screen-md-max){
+    font-size: 60px;
+    line-height: 60px;
+  }
+  @media(min-width: $screen-md){
+    font-size: 120px;
+    line-height: 60px;
+  }
+}

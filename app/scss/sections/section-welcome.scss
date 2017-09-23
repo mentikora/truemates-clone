@@ -1,0 +1,158 @@
+.section-welcome{
+	text-align: center;
+
+	background: {
+		image: url('./images/welcome-section-bg.jpg');
+		repeat: no-repeat;
+		size: cover;
+		position: left bottom;
+	}
+	
+	@media(max-width: $screen-sm-max){
+		background-position: -80px bottom;
+	}
+	@media(max-width: $screen-md-max){
+		padding: {
+			top: 50px;
+			bottom: 50px;
+		}
+	}
+	
+	@media(min-width: $screen-md)and(max-width: $screen-xl-max){
+		height: calc(100vh - 60px);
+	}
+	@media(min-width: $screen-xl){
+		height: calc(100vh - 100px);
+	}
+
+	.container{
+		display: flex;
+		height: 100%;
+		
+		@media(max-width: $screen-xl-max){
+			flex-direction: column;
+		}
+		@media(min-width: $screen-xl){
+			align-items: center;	
+		}
+	}
+
+	/* title */
+	&__title{
+		text-transform: uppercase;
+		font-weight: 300;
+		color: $color-black;
+		
+		@media(max-width: $screen-md-max){
+			font-size: 25px;
+			line-height: 35px;
+		}
+		@media(min-width: $screen-md){
+			font-size: 35px;
+			line-height: 45px;
+		}
+	}
+	
+	/* text */
+	&__text{
+		margin: {
+			top: 0;
+			right: auto;
+			bottom: 30px;
+			left: auto;
+		}
+
+		font: {
+			weight: normal;
+		}
+		
+		@media(max-width: $screen-sm-max){
+			margin-bottom: 0;
+
+			font-size: 14px;
+			line-height: 20px;
+			text-align: justify;
+		}
+		@media(min-width: $screen-sm)and(max-width: $screen-xl-max){
+			margin-bottom: 0;
+
+			font-size: 16px;
+			line-height: 22px;
+		}
+		@media(min-width: $screen-xl){
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+
+	.brush-font{
+		color: $color-primary;
+
+		&--desktop{
+			@media(max-width: $screen-md-max){
+				display: none;
+			}
+		}
+		&--mobile{
+			@media(min-width: $screen-md){
+				display: none;
+			}
+		}
+	}
+
+	.side{
+		flex: 0 0 calc(100% / 3);
+
+		img{
+			display: inline-block;
+			max-width: 60%;
+			height: auto;
+		}
+
+		&--middle{
+			@media(max-width: $screen-xl-max){
+				margin-left: 33%;
+				flex: 0 0 66%
+			}
+			@media(min-width: $screen-xl){
+				margin-top: -100px;
+			}
+		}
+
+		&--right{
+			text-align: right;
+		}
+	}
+}
+
+.underwelcome{
+	@media(max-width: $screen-xl-max){
+		max-width: 80%;
+		margin: {
+			left: auto;
+			right: auto;
+			top: 50px;
+			bottom: 50px;
+		}
+		img{
+			display: inline-block;
+			max-width: 100%;
+			height: auto;
+
+			margin-bottom: 50px;
+		}
+		p{
+			margin: 0;
+		}
+	}
+}
+
+.rotating{
+	//animation: rotating 4s linear infinite;
+}
+
+@keyframes rotating {
+	0% { transform: rotate(0deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(0deg); }
+}

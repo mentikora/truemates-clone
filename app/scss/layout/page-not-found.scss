@@ -1,0 +1,57 @@
+.page-not-found{
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  background-color: $color-primary;
+  color: $color-text;
+
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+
+  h1{
+    font: {
+      family: 'Lato';
+      weight: 900;
+    }
+
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+
+    @media(max-width: $screen-md-max){
+      font-size: 28px;
+      line-height: 35px;
+    }
+    @media(min-width: $screen-md){
+      font-size: 65px;
+      line-height: 80px;
+    }
+  }
+  p{
+    @media(max-width: $screen-md-max){
+      font-size: 21px;
+      line-height: 30px;
+    }
+    @media(min-width: $screen-md){
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+  a{
+    text-decoration: none;
+    color: $color-text;
+    background-color: $color-white;
+    padding: 2px;
+
+    transition: $transition;
+
+    &:hover{
+      color: $color-white;
+      background-color: $color-text;
+    }
+  }
+}

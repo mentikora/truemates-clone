@@ -1,0 +1,24 @@
+.section-about-us{
+	@media(min-width: $screen-md){
+		padding: {
+			top: 10px;
+			bottom: 10px;
+		}	
+	}
+
+	@media(min-width: $screen-lg){
+		margin-top: 50px;
+		height: calc(100vh - 20px);
+	}
+}
+
+.tabs-wrapper{
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+
+	@media(max-width: $screen-lg-max){
+		flex-direction: column;
+	}
+}

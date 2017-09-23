@@ -1,0 +1,46 @@
+.imprint-content{
+	display: none;
+	
+	position: relative;
+	padding-top: 50px;
+	text-align: center;
+	background-color: #575756;
+	
+	&__title{
+		margin: 0;
+
+		text-transform: uppercase;
+		font-weight: 900;
+		color: $color-white;
+
+		@media(max-width: $screen-md-max){
+			font-size: 28px;
+			line-height: 35px;
+		}
+		@media(min-width: $screen-md){
+			font-size: 65px;
+			line-height: 80px;
+		}
+	}
+	&__text{
+		margin: {
+			top: 0;
+			bottom: 0;
+		}
+		font-weight: normal;
+		color: $color-white;
+
+		@media(max-width: $screen-md-max){
+			font-size: 16px;
+			line-height: 21px;
+		}
+		@media(min-width: $screen-md){
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+	.brush-font{
+		color: $color-primary;
+		margin-bottom: 40px;
+	}
+}

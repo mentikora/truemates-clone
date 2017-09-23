@@ -1,0 +1,175 @@
+.portfolio-item{
+	text-align: center;
+	position: relative;
+
+	@media(max-width: $screen-md-max){
+		flex: 0 0 60%;
+		margin: {
+			left: auto;
+			right: auto;
+			bottom: 20px;
+		}
+	}
+	@media(min-width: $screen-md) and (max-width: $screen-lg-max){
+		flex: 0 0 calc(50% - 20px);
+		padding: {
+			left: 10px;
+			right: 10px;
+		}
+		margin-bottom: 20px;
+	}
+	@media(min-width: $screen-lg){
+		flex: 0 0 calc(25% - 20px);
+		padding: {
+			left: 10px;
+			right: 10px;
+		}
+	}
+
+	/* image */
+	&__image{
+		display: flex;
+
+		cursor: pointer;
+		
+		background: {
+			position: 50%;
+			repeat: no-repeat;
+			size: cover;
+		}
+
+		@media(max-width: $screen-lg-max){
+			align-items: flex-end;
+			height: 250px;
+		}
+	}
+
+	/* title */
+	&__title{
+		width: 100%;
+		height: 52px;
+
+		margin: {
+			top: 40%;
+			bottom: 40%;
+		}
+
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+
+		font: {
+			weight: normal;
+		}
+		line-height: 52px;
+		color: $color-black;
+
+		background-color: $color-white;
+
+		@media(max-width: $screen-lg-max){
+			margin: 0;
+		}
+		
+		@media(max-width: $screen-xl-max){
+			font-size: 18px;
+		}
+		@media(min-width: $screen-xl){
+			font-size: 24px;
+		}
+	}
+	
+	/* list */ 
+	&__list{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		overflow: hidden;
+		pointer-events: none;
+
+		transition: $transition;
+		
+		@media(max-width: $screen-md){
+			position: relative;
+			height: 0;
+
+			&.active{
+				height: 230px;
+			}
+		}
+		@media(min-width: $screen-md) and (max-width: $screen-lg-max){
+			top: -5px;
+
+			position: absolute;
+			
+			left: 10px;
+			z-index: 2;
+			width: calc(100% - 20px);
+		}
+		@media(min-width: $screen-lg){
+			top: 100%;
+
+			position: absolute;
+			
+			left: 10px;
+			z-index: 2;
+			width: calc(100% - 20px);
+		}
+
+		/* list item */ 
+		li{
+			height: 52px;
+			margin-top: 5px;
+
+			font: {
+				weight: normal;
+			}
+			line-height: 52px;
+			color: $color-primary;
+			background-color: $portfolio-item-li-bgc;
+
+			transition: $transition;
+			transform: translateX(-110%);
+
+			&.active{
+				transform: translateX(0);				
+			}
+
+			@media(min-width: $screen-md) and (max-width: $screen-lg-max){
+				height: 35px;
+				line-height: 35px;
+			}
+
+			@media(max-width: $screen-xl-max){
+				font-size: 16px;
+			}
+			@media(min-width: $screen-xl){
+				font-size: 21px;
+			}
+		}
+	}
+
+	/* Modification's */
+	&--film{
+		.portfolio-item__image{
+			background-image: url('./images/portfolio-film.jpg');
+		}
+	}
+	&--ads{
+		.portfolio-item__image{
+			background-image: url('./images/portfolio-ad.jpg');
+		}
+	}
+	&--content{
+		.portfolio-item__image{
+			background-image: url('./images/portfolio-piece.jpg');
+		}
+	}
+	&--photo{
+		.portfolio-item__image{
+			background-image: url('./images/portfolio-photo.jpg');
+		}
+	}
+
+}

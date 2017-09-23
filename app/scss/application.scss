@@ -1,0 +1,26 @@
+@import "base/normalize.scss";
+@import "base/font.scss";
+@import "base/variables.scss";
+@import "base/heading.scss";
+
+@import "extension/slick.scss";
+
+@import "layout/layout.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "layout/page-not-found.scss";
+
+@import "components/navigation.scss";
+@import "components/portfolio-item.scss";
+@import "components/dot-item.scss";
+@import "components/dot-content-item.scss";
+@import "components/tab-item.scss";
+
+@import "sections/section-welcome.scss";
+@import "sections/section-portfolio.scss";
+@import "sections/section-dots.scss";
+@import "sections/section-slider.scss";
+@import "sections/section-about-us.scss";
+@import "sections/section-team.scss";
+@import "sections/imprint.scss";
+

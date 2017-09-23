@@ -1,0 +1,192 @@
+.section-slider{
+	overflow: hidden;
+
+	@media(max-width: $screen-md-max){
+		padding-top: 50px;
+	}
+
+	/* slider */
+	.portfolio-slider-wrapper{
+		position: relative;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+
+		@media(max-width: $screen-md-max){
+			width: 70%;
+		}
+		@media(min-width: $screen-md){
+			width: 80%;
+		}
+		
+		&::before,
+		&::after{
+			content: '';
+			width: 200%;
+			height: 100%;
+
+			display: block;
+			position: absolute;
+			top: 0;
+			z-index: 2;
+			
+			@media(max-width: $screen-md-max){
+				background-color: $color-white;
+			}
+			@media(min-width: $screen-md){
+				background-color: rgba(0,0,0, .5);
+			}
+		}
+		&::before{
+			right: 100%;
+		}
+		&::after{
+			left: 100%;
+		}
+	}
+	.portfolio-slider{
+		@media(max-width: $screen-md-max){
+			height: 300px;
+		}
+		@media(min-width: $screen-md){
+			height: 600px;
+		}
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.slick-list{
+			overflow: visible;
+		}
+
+		.slick-slide{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content:  flex-end;
+
+			outline: 0;	
+
+			background:{
+				size: cover;
+				position: 50%;
+				repeat: no-repeat;
+			}
+			color: $color-white;
+
+			@media(max-width: $screen-md-max){
+				height: 300px;
+			}
+			@media(min-width: $screen-md){
+				height: 600px;
+			}
+			
+			&__title{
+				@extend .heading;
+			}
+			&__text{
+				margin: {
+					top: 0;
+					bottom: 10px;
+				}
+
+				text-transform: uppercase;
+				font-weight: normal;
+				@media(max-width: $screen-lg-max){
+					font-size: 21px;
+					line-height: 25px;
+				}
+				@media(min-width: $screen-lg){
+					font-size: 40px;
+					line-height: 40px;
+				}
+			}
+			.brush-font{
+				margin-bottom: 20px;
+
+				color: $color-primary;
+			}
+		}
+
+		.ps1{
+			background-image: url('./images/nivea-slide-1.jpg');
+		}
+		.ps2{
+			background-image: url('./images/bookmark-1.jpg');
+		}
+		.ps3{
+			background-image: url('./images/jinx.jpg');
+		}
+		.ps4{
+			background-image: url('./images/portfolio-film.jpg');
+		}
+	}
+
+	/* slider arrows */
+	.slick-prev,
+	.slick-next{
+		padding: 0;
+		position: absolute;
+		z-index: 10;
+		outline: 0;
+		background: none;
+		text-indent: -9999px;
+
+		transition: $transition;
+		
+		@media(max-width: $screen-md-max){
+			top: 50%;
+			margin-top: -22px;
+		}
+		@media(min-width: $screen-md){
+			top: 0;
+		}
+	}
+	.slick-prev{
+		width: 0;
+		height: 0;
+		border-style: solid;
+
+		@media(max-width: $screen-md-max){
+			left: -40px;
+			border-width: 22.5px 30px 22.5px 0;
+			border-color: transparent $color-primary transparent transparent;
+		}
+		@media(min-width: $screen-md){
+			left: -100px;
+
+			border-width: 300px 100px 300px 0;
+			border-color: transparent $color-white transparent transparent;
+
+			&:hover{
+				border-color: transparent $color-primary transparent transparent;			
+			}
+		}
+	}
+	.slick-next{
+		width: 0;
+		height: 0;
+		border-style: solid;
+
+		@media(max-width: $screen-md-max){
+			right: -40px;
+			border-width: 22.5px 0 22.5px 30px;
+			border-color: transparent transparent transparent $color-primary ;
+		}
+		@media(min-width: $screen-md){
+			right: -100px;
+
+			border-width: 300px 0 300px 100px;
+			border-color: transparent transparent transparent $color-white;
+
+			&:hover{
+				border-color: transparent transparent transparent $color-primary;			
+			}
+		}
+	}
+
+}

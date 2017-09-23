@@ -1,0 +1,28 @@
+.section-dots{
+	
+	.dots-list-wrapper{
+		padding: 20px 0;
+		@media(max-width: $screen-md-max){
+			height: 25px;
+		}
+		@media(min-width: $screen-md){
+			height: 150px;	
+		}
+	}
+
+	.dots-list{
+		display: flex;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		justify-content: center;	
+
+		transition: $transition;
+
+		&.active{
+			opacity: 1;
+			height: auto;
+			overflow: visible;
+		}
+	}
+}
