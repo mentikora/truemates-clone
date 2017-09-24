@@ -57,6 +57,7 @@
 	/* Modification => header */
 	&--header{
 		text-align: right;
+		float: right;
 
 		@media(min-width: $screen-md) and (max-width: $screen-xl-max){
 			li{
@@ -92,11 +93,20 @@
 			}
 		}
 		@media(min-width: $screen-lg){
-			display: block !important;
-			margin-bottom: 25px;
+			margin: {
+				top: 55px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
 		}
 		@media(min-width: $screen-xl){
-			margin-bottom: 30px;
+			margin: {
+				top: 55px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
 		}
 	}
 

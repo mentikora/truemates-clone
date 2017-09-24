@@ -60,14 +60,6 @@
 		}
 	}
 
-	&__explore-more{
-		display: flex;
-		justify-content: center;
-	}
-	&__em-item{
-		flex: 0 0 25%;
-	}
-
 	&__close{
 		position: absolute;
 		top: 15px;
@@ -88,6 +80,12 @@
 
 		&:hover{
 			color: $color-primary;
+		}
+	}
+
+	&__video{
+		.dot-content-item__subtitle{
+			margin-bottom: 25px;
 		}
 	}
 }
