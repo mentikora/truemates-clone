@@ -10,16 +10,13 @@
 	}
 
 	.container{
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		flex-wrap: wrap;
-
 		height: 100%;
 	}
 
 	&-logo-wrapper{
 		position: relative;
+		float: left;
+		height: 100%;
 
 		@media(max-width: $screen-lg-max){
 			width: 150px;
@@ -32,15 +29,15 @@
 	.logo{
 		display: block;
 		width: 100%;
-		position: relative;
+		position: absolute;
 		z-index: 2;
 		left: 0;
 
 		@media(max-width: $screen-lg-max){
-			bottom: -25px;
+			top: 15px;
 		}
 		@media(min-width: $screen-lg){
-			bottom: -50px;
+			top: 15px;
 		}
 
 		img{
@@ -52,9 +49,9 @@
 
 	/* mobile menu button */ 
 	&__menu-button{
-		
+		float: right;
 		width: 50px;
-		margin-bottom: 10px;
+		margin-top: 15px;
 
 		background: inherit;
 		border: 0;

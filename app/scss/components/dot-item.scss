@@ -79,7 +79,42 @@
 			background-image: url('../dist/images/ford-circle-content-pi.jpg');
 		}
 
+		/* tui dots */ 
+		&--tui-film{
+			background-image: url('../dist/images/tui-circle-film.png');
+		}
+		&--tui-photo{
+			background-image: url('../dist/images/tui-circle-photo.jpg');
+		}
+		&--tui-content-pi{
+			background-image: url('../dist/images/tui-circle-content-pi.png');
+		}
 
+		/* sOliver dots */ 
+		&--soliver-film{
+			background-image: url('../dist/images/soliver-circle-film.jpg');
+		}
+		&--soliver-photo{
+			background-image: url('../dist/images/soliver-circle-photo.jpg');
+		}
+
+		/* vodafone dots */ 
+		&--vodafone-film{
+			background-image: url('../dist/images/vodafone-circle-film.jpg');
+		}
+		&--vodafone-photo{
+			background-image: url('../dist/images/vodafone-circle-photo.jpg');
+		}
+
+		/* levis dot */ 
+		&--levis-ad{
+			background-image: url('../dist/images/levis-circle-ad.jpg');
+		}
+
+		/* deine chemie dot */ 
+		&--chemie-film{
+			background-image: url('../dist/images/chemie-circle-film.jpg');
+		}
 
 		@media(max-width: $screen-md-max){
 			display: none;

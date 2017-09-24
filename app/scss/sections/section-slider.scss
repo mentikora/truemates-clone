@@ -65,6 +65,7 @@
 
 		.slick-slide{
 			display: flex;
+
 			align-items: center;
 			flex-direction: column;
 			justify-content:  flex-end;
@@ -77,6 +78,7 @@
 				repeat: no-repeat;
 			}
 			color: $color-white;
+			text-align: center;
 
 			@media(max-width: $screen-md-max){
 				height: 300px;
@@ -113,7 +115,19 @@
 			background-image: url('./images/ford-slide-1.jpg');
 		}
 		.ps4{
-			background-image: url('./images/portfolio-film.jpg');
+			background-image: url('./images/tui-slide-1.jpg');
+		}
+		.ps5{
+			background-image: url('./images/soliver-slide-1.jpg');
+		}
+		.ps6{
+			background-image: url('./images/vodafone-slide-1.jpg');
+		}
+		.ps7{
+			background-image: url('./images/levis-slide-1.jpg');
+		}
+		.ps8{
+			background-image: url('./images/chemie-slide-1.jpg');
 		}
 	}
 
