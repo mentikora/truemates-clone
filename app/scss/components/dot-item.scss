@@ -1,11 +1,21 @@
 .dot-item{
 	position: relative;
 	cursor: pointer;
-	margin: {
-		left: 15px;
-		right: 15px;
-	}
+	
 	text-align: center;
+	
+	@media(max-width: $screen-md-max){
+		margin: {
+			left: 5px;
+			right: 5px;
+		}
+	}
+	@media(min-width: $screen-md){
+		margin: {
+			left: 15px;
+			right: 15px;
+		}
+	}
 	
 	&.active::after,
 	&:hover::after{
@@ -120,12 +130,12 @@
 			display: none;
 		}
 		@media(min-width: $screen-md)and(max-width: $screen-xl-max){
-			width: 80px;
-			height: 80px;
+			width: 60px;
+			height: 60px;
 		}
 		@media(min-width: $screen-xl){
-			width: 100px;
-			height: 100px;
+			width: 80px;
+			height: 80px;
 		}
 	}
 	
