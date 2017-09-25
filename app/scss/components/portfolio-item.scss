@@ -21,7 +21,7 @@
 	@media(min-width: $screen-lg){
 		flex: 0 0 calc(25% - 20px);
 
-		height: 300px;
+		height: 40vh;
 		margin: {
 			left: 10px;
 			right: 10px;
@@ -34,12 +34,6 @@
 		align-items: center;
 
 		cursor: pointer;
-		
-		background: {
-			position: 50%;
-			repeat: no-repeat;
-			size: cover;
-		}
 
 		@media(max-width: $screen-lg-max){
 			align-items: flex-end;
@@ -53,7 +47,7 @@
 	/* title */
 	&__title{
 		width: 100%;
-		height: 52px;
+		height: 35px;
 
 		margin: 0;
 		text: {
@@ -62,7 +56,7 @@
 		}
 
 		font-weight: normal;
-		line-height: 52px;
+		line-height: 35px;
 		color: $color-black;
 
 		background-color: $color-white;
@@ -71,7 +65,7 @@
 			font-size: 18px;
 		}
 		@media(min-width: $screen-xl){
-			font-size: 24px;
+			font-size: 21px;
 		}
 	}
 	
@@ -116,12 +110,12 @@
 		/* list item */ 
 		li{
 			position: relative;
-			height: 52px;
+			height: 35px;
 
 			font: {
 				weight: normal;
 			}
-			line-height: 52px;
+			line-height: 35px;
 			color: $color-primary;
 			background-color: $portfolio-item-li-bgc;
 			border-top: 5px solid $color-primary;
@@ -175,22 +169,42 @@
 	/* Modification's */
 	&--film{
 		.portfolio-item__image{
+			background: {
+				position: left 50%;
+				repeat: no-repeat;
+				size: cover;
+			}
 			background-image: url('./images/portfolio-film.jpg');
 		}
 	}
 	&--ads{
 		.portfolio-item__image{
-			background-image: url('./images/portfolio-ad.jpg');
+			background: {
+				image: url('./images/portfolio-ad.jpg');
+				position: 50% bottom;
+				repeat: no-repeat;
+				size: cover;
+			}
 		}
 	}
 	&--content{
 		.portfolio-item__image{
-			background-image: url('./images/portfolio-piece.jpg');
+			background: {
+				image: url('./images/portfolio-piece.jpg');
+				position: 50% 30%;
+				repeat: no-repeat;
+				size: 150%;
+			}
 		}
 	}
 	&--photo{
 		.portfolio-item__image{
-			background-image: url('./images/portfolio-photo.jpg');
+			background: {
+				image: url('./images/portfolio-photo.jpg');
+				position: 50%;
+				repeat: no-repeat;
+				size: cover;
+			}
 		}
 	}
 

@@ -5,7 +5,7 @@
 	@media(max-width: $screen-lg-max){
 		padding: {
 			top: 50px;
-			bottom: 50px;
+			bottom: 100px;
 		}
 	}
 	@media(min-width: $screen-lg){
@@ -16,8 +16,8 @@
 
 		height: 100vh;
 		padding: {
-			top: 100px;
-			bottom: 100px;
+			// top: 100px;
+			bottom: 150px;
 		}
 	}
 	

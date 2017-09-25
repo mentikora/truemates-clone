@@ -50,7 +50,6 @@
 	/* mobile menu button */ 
 	&__menu-button{
 		float: right;
-		width: 50px;
 		margin-top: 15px;
 
 		background: inherit;
@@ -58,17 +57,18 @@
 		outline: 0;
 
 		span{
+			font-family: 'Northwell Swash';
 			display: block;
-			height: 2px;
-			margin-bottom: 6px;
+			font-size: 35px;
+			line-height: 12px;
 
-			background-color: $color-black;
+			color: $color-black;
 
 			transition: $transition;
 		}
 
 		&:hover span{
-			background-color: $color-white;
+			color: $color-white;
 		}
 
 		@media(min-width: $screen-lg){

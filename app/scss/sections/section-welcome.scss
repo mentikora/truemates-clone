@@ -79,7 +79,11 @@
 			font-size: 16px;
 			line-height: 22px;
 		}
-		@media(min-width: $screen-xl){
+		@media(min-width: $screen-xl)and(max-width: 1350px){
+			font-size: 14px;
+			line-height: 21px;
+		}
+		@media(min-width: 1351px){
 			font-size: 18px;
 			line-height: 30px;
 		}
@@ -103,8 +107,15 @@
 	.side{
 		img{
 			display: inline-block;
-			max-width: 150px;
+			
 			height: auto;
+
+			@media(min-width: $screen-xl)and(max-width: 1350px){
+				max-width: 120px;
+			}
+			@media(min-width: 1351px){
+				max-width: 150px;
+			}
 		}
 
 		&--left{
@@ -118,6 +129,13 @@
 
 		&--middle{
 			@media(max-width: $screen-xl-max){
+				margin-left: 40%;
+				flex: 0 0 60%;
+				br{
+					display: none;
+				}
+			}
+			@media(min-width: $screen-sm)and(max-width: $screen-xl-max){
 				margin-left: 33%;
 				flex: 0 0 66%;
 				br{
@@ -136,7 +154,7 @@
 			background: {
 				image: url('../dist/images/iphone-rotating.jpg');
 				repeat: no-repeat;
-				position: calc(100% - 150px) 35%;
+				//position: calc(100% - 150px) 35%;
 			}
 			
 			@media(max-width: $screen-xl-max){
@@ -144,6 +162,13 @@
 			}
 			@media(min-width: $screen-xl){
 				flex: 0 0 30%
+			}
+
+			@media(min-width: $screen-xl)and(max-width: 1350px){
+				background-position: calc(100% - 120px) 35%;
+			}
+			@media(min-width: 1351px){
+				background-position: calc(100% - 150px) 35%;
 			}
 		}
 	}

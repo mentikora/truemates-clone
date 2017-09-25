@@ -137,6 +137,11 @@
 				line-height: 50px;
 			}
 		}
+		@media(max-width: $screen-sm-max){
+			button{
+				font-size: 14px;
+			}
+		}
 		@media(min-width: $screen-lg){
 			padding: {
 				top: 45px;

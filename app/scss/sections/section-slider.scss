@@ -50,7 +50,7 @@
 			height: 300px;
 		}
 		@media(min-width: $screen-md){
-			height: 600px;
+			height: calc(100vh - 190px);
 		}
 
 		img{
@@ -84,7 +84,7 @@
 				height: 300px;
 			}
 			@media(min-width: $screen-md){
-				height: 600px;
+				height: calc(100vh - 190px);
 			}
 			
 			&__title{
@@ -162,9 +162,9 @@
 			border-color: transparent $color-primary transparent transparent;
 		}
 		@media(min-width: $screen-md){
-			left: -100px;
+			left: -60px;
 
-			border-width: 300px 100px 300px 0;
+			border-width: calc((100vh - 190px)/2 ) 60px calc((100vh - 190px)/2 ) 0;
 			border-color: transparent $color-white transparent transparent;
 
 			&:hover{
@@ -183,9 +183,9 @@
 			border-color: transparent transparent transparent $color-primary ;
 		}
 		@media(min-width: $screen-md){
-			right: -100px;
+			right: -60px;
 
-			border-width: 300px 0 300px 100px;
+			border-width: calc((100vh - 190px)/2 ) 0 calc((100vh - 190px)/2 ) 60px;
 			border-color: transparent transparent transparent $color-white;
 
 			&:hover{
