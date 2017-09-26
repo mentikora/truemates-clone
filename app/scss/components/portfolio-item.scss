@@ -34,8 +34,12 @@
 		align-items: center;
 
 		cursor: pointer;
-
-		@media(max-width: $screen-lg-max){
+		
+		@media(max-width: $screen-sm-max){
+			align-items: flex-end;
+			height: 150px;
+		}
+		@media(min-width: $screen-sm)and(max-width: $screen-lg-max){
 			align-items: flex-end;
 			height: 250px;
 		}
@@ -78,14 +82,12 @@
 		overflow: hidden;
 		pointer-events: none;
 
-		transition: $transition;
-		
 		@media(max-width: $screen-md){
 			position: relative;
 			height: 0;
 
 			&.active{
-				height: 230px;
+				height: auto;
 			}
 		}
 		@media(min-width: $screen-md) and (max-width: $screen-lg-max){
@@ -109,6 +111,7 @@
 
 		/* list item */ 
 		li{
+			will-change: auto;
 			position: relative;
 			height: 35px;
 
@@ -120,7 +123,7 @@
 			background-color: $portfolio-item-li-bgc;
 			border-top: 5px solid $color-primary;
 
-			transition: $transition;
+			transition: transform .25s linear;
 			
 			&:nth-child(1){
 				transform: translateY(-100%);	
@@ -150,7 +153,6 @@
 					transform: translateY(0%);	
 				}
 			}
-
 
 			@media(min-width: $screen-md) and (max-width: $screen-lg-max){
 				height: 35px;
