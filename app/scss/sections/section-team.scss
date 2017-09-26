@@ -305,17 +305,23 @@
 		
 		line-height: 35px;
 		font: {
-			size: 28px;
+			size: 24px;
 			weight: normal;
 		}
 		text-transform: uppercase;
 	}
 	&__text{
 		font: {
-			size: 16px;
+			size: 14px;
 			weight: normal;
 		}
-		line-height: 25px;
+		line-height: 21px;
+
+    &--center{
+  		text-align: justify;
+      -moz-text-align-last: center;
+      text-align-last: center;	
+    }
 	}
 	&__quote{
 		display: block;
@@ -323,11 +329,11 @@
 			bottom: 15px;
 		}
 		font: {
-			size: 16px;
+			size: 14px;
 			weight: 300;
 			style: italic;
 		}
-		line-height: 25px;
+		line-height: 21px;
 	}
 
 	.brush-font{

@@ -71,7 +71,10 @@
 
 			font-size: 14px;
 			line-height: 20px;
+
 			text-align: justify;
+	    -moz-text-align-last: center;
+	    text-align-last: center;
 		}
 		@media(min-width: $screen-sm)and(max-width: $screen-xl-max){
 			margin-bottom: 0;
@@ -98,6 +101,7 @@
 			}
 		}
 		&--mobile{
+			margin-top: 10px;
 			@media(min-width: $screen-md){
 				display: none;
 			}

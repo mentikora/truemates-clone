@@ -12,6 +12,8 @@
   }
 
   h1{
+    margin-bottom: 0;
+
     font: {
       family: 'Lato';
       weight: 900;
@@ -32,6 +34,7 @@
     }
   }
   p{
+    margin-top: 0;
     @media(max-width: $screen-md-max){
       font-size: 21px;
       line-height: 30px;

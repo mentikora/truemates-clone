@@ -86,6 +86,10 @@
 	&__video{
 		.dot-content-item__subtitle{
 			margin-bottom: 25px;
+
+			&--bottom{
+				margin-top: 25px;
+			}
 		}
 	}
 }

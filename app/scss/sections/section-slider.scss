@@ -65,10 +65,8 @@
 
 		.slick-slide{
 			display: flex;
-
 			align-items: center;
 			flex-direction: column;
-			justify-content:  flex-end;
 
 			outline: 0;	
 
@@ -80,6 +78,13 @@
 			color: $color-white;
 			text-align: center;
 
+			@media(max-width: $screen-sm-max){
+				justify-content:  center;
+			}
+			@media(min-width: $screen-sm){
+				justify-content:  flex-end;
+			}
+
 			@media(max-width: $screen-md-max){
 				height: 300px;
 			}
@@ -89,19 +94,40 @@
 			
 			&__title{
 				@extend .heading;
+
+				@media(max-width: $screen-sm-max){
+					margin-bottom: 0;
+
+					font-size: 35px;
+				}
 			}
 			&__text{
 				@extend .subheading;
+				
+				padding: {
+					left: 5px;
+					right: 5px;
+				}
 
-				margin: {
-					top: 0;
-					bottom: 10px;
+				@media(max-width: $screen-sm-max){
+					margin: 0;
+
+					font-size: 16px;
+				}
+				@media(min-width: $screen-sm){
+					margin: {
+						top: 0;
+						bottom: 10px;
+					}
 				}
 			}
 			.brush-font{
 				margin-bottom: 20px;
 
 				color: $color-primary;
+				@media(max-width: $screen-sm-max){
+					display: none;
+				}
 			}
 		}
 
