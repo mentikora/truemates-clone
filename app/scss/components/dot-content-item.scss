@@ -19,14 +19,73 @@
 		color: $color-primary;
 	}
 
-	iframe{
+	.video-wrapper{
+		
+		&--vertical{
+			width: 296px;
+			height: 600px;
+
+			background: {
+				image: url('../dist/images/iphone.png');
+				repeat: no-repeat;
+				size: cover;
+				position: 50%;
+			}
+			
+			iframe{
+				width: 261px;
+		    height: 455px;
+		    margin-top: 71px;
+			}
+		}
+
+		&--horizontal{
+			margin-bottom: 20px;
+
+			width: 600px;
+			height: 296px;
+
+			background: {
+				image: url('../dist/images/iphone-horizontal.png');
+				repeat: no-repeat;
+				size: cover;
+				position: 50%;
+			}
+			
+			iframe{
+				width: 460px;
+		    height: 260px;
+		    margin-top: 17px;
+			}
+		}
+	}
+
+	.video-flex-column{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.video-flex-row{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.video-wrapper:first-child{
+			margin-right: 10px;
+		}
+		.video-wrapper:last-child{
+			margin-left: 10px;
+		}
+	}
+	/* iframe{
 		@media(max-width: $screen-md-max){
 			height: 300px;
 		}
 		@media(min-width: $screen-md){
 			height: 500px;
 		}
-	}
+	} */
 
 	&__title{
 		@extend .heading;
