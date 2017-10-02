@@ -9,6 +9,7 @@
 	@media(min-width: $screen-lg){
 		margin-top: 50px;
 		height: calc(100vh - 20px);
+		width: calc(100% + 10px);
 	}
 }
 
