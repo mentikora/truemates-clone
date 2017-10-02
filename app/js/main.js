@@ -41,16 +41,19 @@ $(document).ready(function(){
 		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
 		$('.dots-list[data-slide-dots="' + currentSlideData +'"]').addClass('active');
 	});
+
 	portfolioSlider.slick({
 		autoplay: false,
 		arrows: true,
 		dots: false
 	});
+
 	portfolioSlider.on('beforeChange', function(){
 		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
 
 		$('.dots-list[data-slide-dots="' + currentSlideData +'"]').removeClass('active');
 	});
+
 	portfolioSlider.on('afterChange', function(){
 		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
 		var activeDot = $('.dot-item.active');
@@ -75,8 +78,16 @@ $(document).ready(function(){
 		$(this).toggleClass('active');
 		$(this).siblings().removeClass('active');
 
-		dataItem.siblings().slideUp().removeClass('active');
-		dataItem.toggleClass('active').slideToggle();
+		if(dataItem.hasClass('active')){
+			dataItem.removeClass('active');
+		} else {
+			dataItem.addClass('active').slideDown(600);
+			$('html,body').animate({
+	    	scrollTop: $('.dot-content-item.active').offset().top
+			}, 500);
+
+			dataItem.siblings('.active').removeClass('active');
+		}
 	});
 
 	// Close dot content
@@ -85,18 +96,12 @@ $(document).ready(function(){
 		var parentData = parent.data('dot-content');
 		var targetDot = $('.dot-item[data-dot="'+ parentData +'"]');
 		var iframe = parent.find('iframe');
-		var src = iframe.attr('src');
-
-		if(iframe){
-			iframe.attr('src', ' ');
-			iframe.attr('src', src);
-		}
 
 		if(parentData != ''){
 			targetDot.removeClass('active');	
-			parent.slideUp();
+			parent.removeClass('active');
 		} else {
-			parent.slideUp();
+			parent.removeClass('active');
 		}
 		
 	});
@@ -106,13 +111,13 @@ $(document).ready(function(){
 		var parent = $(this).parent();
 		var text = parent.find('.tab-item__text');
 
-		text.removeClass('active');
 		parent.addClass('active');
 		parent.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
 		  function(e) {
 		  	text.addClass('active');
 	  });
 		parent.siblings().removeClass('active');
+		parent.siblings().find('.tab-item__text').removeClass('active');
 	});
 
 	// Team slider

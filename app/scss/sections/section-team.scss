@@ -1,12 +1,11 @@
 .section-team{
-	
+	background-color: $color-primary;
+
 	@media(max-width: $screen-md-max){
 		padding: {
 			top: 50px;
 			bottom: 50px;
 		}
-
-		background-color: $color-white;
 	}
 	@media(min-width: $screen-md){
 		display: flex;
@@ -19,8 +18,6 @@
 			top: 100px;
 			bottom: 100px;
 		}
-
-		background-color: $color-primary;
 	}
 
 	/* title */
@@ -28,29 +25,35 @@
 		@extend .heading;
 
 		margin-bottom: 40px;
-		
-		@media(max-width: $screen-md-max){
-			display: none;
-		}
 	}
 }
 
 .section-team-slides-wrapper{
 	width: 100%;
+	display: flex;
 	
 	@media(max-width: $screen-md-max){
-		display: none;
+		flex-direction: column;
 	}
 	@media(min-width: $screen-md){
-		display: flex;
+		
 	}
 }
 .section-team-slide{
-	flex: 0 0 calc(100% / 3);
 	overflow: hidden;
 
 	color: $color-text;
-
+	
+	@media(max-width: $screen-md-max){
+		flex: 0 0 100%;
+	}
+	@media(min-width: $screen-md){
+		flex: 0 0 calc(100% / 3);	
+	}
+	
+	@media(max-width: $screen-lg){
+		height: 250px;
+	}
 	@media(min-width: $screen-lg){
 		height: 50vh;
 	}
@@ -151,27 +154,34 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		
+
+		@media(max-width: $screen-md-max){
+			align-items: center;
+		}
 	}
 	&--sonia{
-		align-items: flex-start;
-
 		background: {
-			image: url('./images/team-sonja.png');
+			image: url('./images/team/team-sonja.png');
 			position: 50%;
 			repeat: no-repeat;
 			size: cover;
 		}
+
+		@media(min-width: $screen-md){
+			align-items: flex-start;
+		}
 	}
 	&--phillip{
-		align-items: flex-end;
-		text-align: right;
-
 		background: {
-			image: url('./images/team-phillip.png');
+			image: url('./images/team/team-philipp02.png');
 			position: 50%;
 			repeat: no-repeat;
 			size: cover;
+		}
+
+		@media(min-width: $screen-md){
+			align-items: flex-end;
+			text-align: right;
 		}
 	}
 }
@@ -194,150 +204,40 @@
 			size: cover;
 		}
 		&--1{
-			background-image: url('./images/team-lukas.png');
+			background-image: url('./images/team/team-lukas.png');
 		}
 		&--2{
-			background-image: url('./images/team-philip2.jpg');
+			background-image: url('./images/team/team-philip2.jpg');
 		}
 		&--3{
-			background-image: url('./images/team-sandro.png');
+			background-image: url('./images/team/team-sandro.png');
 		}
 		&--4{
-			background-image: url('./images/team-joern.png');
+			background-image: url('./images/team/team-joern.png');
+		}
+		&--5{
+			background-image: url('./images/team/team-caspar.jpg');
+		}
+		&--6{
+			background-image: url('./images/team/team-marian_hauffe.jpg');
+		}
+		&--7{
+			background-image: url('./images/team/team-matthias.jpg');
+		}
+		&--8{
+			background-image: url('./images/team/team-robert_wiese.jpg');
+		}
+		&--9{
+			background-image: url('./images/team/team-sonja02.png');
+		}
+		&--10{
+			background-image: url('./images/team/team-taleb.jpg');
+		}
+		&--11{
+			background-image: url('./images/team/team-wolke.jpg');
+		}
+		&--12{
+			background-image: url('./images/team/team-wolke2.jpg');
 		}
 	}
-}
-
-/* on mobile*/
-.section-team-mobile{
-	@media(max-width: $screen-md-max){
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		width: 80%;
-		margin: {
-			left: auto;
-			right: auto;
-		}
-	}
-	@media(min-width: $screen-md){
-		display: none;
-	}
-
-	&__circle-img{
-		position: relative;
-		z-index: 2;
-
-		margin: {
-			top: 15px;
-			bottom: 15px;
-		}
-
-		overflow: hidden;
-		border-radius: 50%;
-
-		background: {
-			size: cover;
-			position: 50%;
-			repeat: no-repeat;
-		}
-		
-		&.selected{
-			margin-top: 7px;
-			border: 8px solid $color-primary;
-		}
-		
-		@media(max-width: $screen-sm-max){
-			width: 60px;
-			height: 60px;
-		}
-		@media(min-width: $screen-sm)and(max-width: $screen-md-max){
-			width: 100px;
-			height: 100px;
-		}
-
-		&-1{
-			background-image: url('./images/team-sonja.png');
-		}
-		&-2{
-			background-image: url('./images/team-lukas.png');
-		}
-		&-3{
-			background-image: url('./images/team-phillip.png');
-		}
-		&-4{
-			background-image: url('./images/team-philip2.jpg');
-		}
-		&-5{
-			background-image: url('./images/team-sandro.png');
-		}
-		&-6{
-			background-image: url('./images/team-joern.png');
-		}
-	}
-	.divider{
-		flex: 0 0 100%;
-	}
-
-	&__content{
-		flex: 0 0 calc(100% - 30px);
-		
-		padding: {
-			top: 60px;
-			right: 15px;
-			left: 15px;
-		}
-
-		background-color: $color-primary;
-		color: $color-text;
-		text-align: center;
-
-		@media(max-width: $screen-sm-max){
-			margin-top: -60px;
-		}
-		@media(min-width: $screen-sm){
-			margin-top: -80px;
-		}
-	}
-	&__title{
-		margin-bottom: 15px;
-		
-		line-height: 35px;
-		font: {
-			size: 24px;
-			weight: normal;
-		}
-		text-transform: uppercase;
-	}
-	&__text{
-		font: {
-			size: 14px;
-			weight: normal;
-		}
-		line-height: 21px;
-
-    &--center{
-  		text-align: justify;
-      -moz-text-align-last: center;
-      text-align-last: center;	
-    }
-	}
-	&__quote{
-		display: block;
-		margin: {
-			bottom: 15px;
-		}
-		font: {
-			size: 14px;
-			weight: 300;
-			style: italic;
-		}
-		line-height: 21px;
-	}
-
-	.brush-font{
-		color: $color-white;
-	}
-
 }

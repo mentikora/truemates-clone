@@ -64,13 +64,25 @@
 
 		/* nivea dots */
 		&--nivea-film{
-			background-image: url('../dist/images/nivea-circle-film.jpg');
+			background: {
+				image: url('../dist/images/nivea-circle-film.jpg');
+				position: 65% 50%;
+				size: 170px;
+			}
 		}
 		&--nivea-ad{
-			background-image: url('../dist/images/nivea-circle-ad.jpg');
+			background: {
+				image: url('../dist/images/nivea-circle-ad.jpg');
+		    position: 67% 15%;
+    		size: 250px;
+			}
 		}
 		&--nivea-photo{
-			background-image: url('../dist/images/nivea-circle-photo.jpg');
+			background: {
+				image: url('../dist/images/nivea-circle-photo.jpg');
+				size: 205px;
+				position: 47% 32%;
+			}
 		}
 		
 		/* anson dots*/ 
@@ -110,10 +122,16 @@
 
 		/* vodafone dots */ 
 		&--vodafone-film{
-			background-image: url('../dist/images/vodafone-circle-film.jpg');
+			background: {
+				position: 0 0;
+				image: url('../dist/images/vodafone-circle-film.jpg');
+			}
 		}
 		&--vodafone-photo{
-			background-image: url('../dist/images/vodafone-circle-photo.jpg');
+			background: {
+				position: right 50%;
+				image: url('../dist/images/vodafone-circle-photo.jpg');
+			}
 		}
 
 		/* levis dot */ 
