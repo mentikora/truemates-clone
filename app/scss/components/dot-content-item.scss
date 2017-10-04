@@ -150,16 +150,12 @@
 }
 
 .video-sixteen-nine{
-	width: 70%;
-	margin: {
-		left: auto;
-		right: auto;
-	}
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
 
+	background: $color-black;
 	iframe{
 		position: absolute;
 		top: 0;
