@@ -81,8 +81,16 @@
 		background-color: $color-primary;
 
 		@media(max-width: $screen-lg-max){
-			padding: 20px;
-			flex: 0 0 20px;
+			padding: {
+				left: 20px;
+				right: 20px;
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 0 0 60px;
+
 
 			line-height: 21px;
 			text-align: center;
@@ -149,8 +157,17 @@
 		overflow: hidden;
 
 		background-repeat: no-repeat;
-
+		
+		@media(max-width: $screen-md-max){
+			br{
+				display: none;
+			}
+		}
 		@media(max-width: $screen-lg-max){
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
 			height: 410px;
 			background-position: 50%;
 			background:{
@@ -164,9 +181,11 @@
 
 		.brush-font{
 			margin-top: 15px;
-			width: 100%;
+			display: block;
 
 			color: $color-primary;
+			font-size: 70px;
+			line-height: 30px;
 		}
 	}
 
@@ -177,8 +196,15 @@
 		}
 
 		.tab-item__text{
-			text-align: left;
-			margin: 15% 0 0 15%;
+			@media(min-width: $screen-lg){
+				text-align: left;
+				margin: 15% 0 0 15%;
+			}
+		}
+		.brush-font{
+			@media(min-width: $screen-lg){
+				margin-left: 25px;
+			}
 		}
 	}
 	&__content-2{
@@ -188,8 +214,15 @@
 		}
 
 		.tab-item__text{
-			text-align: right;
-			margin: 40px 40px 0 0;
+			@media(min-width: $screen-lg){
+				text-align: right;
+				margin: 40px 40px 0 0;
+			}
+		}
+		.brush-font{
+			@media(min-width: $screen-lg){
+				margin-right: 25px;
+			}
 		}
 	}
 	&__content-3{
@@ -199,8 +232,15 @@
 		}
 
 		.tab-item__text{
-			text-align: left;
-			margin: 80px 0 0 40px;
+			@media(min-width: $screen-lg){
+				text-align: left;
+				margin: 80px 0 0 40px;
+			}
+		}
+		.brush-font{
+			@media(min-width: $screen-lg){
+				margin-left: 40px;
+			}
 		}
 	}
 	&__content-4{
@@ -210,8 +250,15 @@
 		}
 
 		.tab-item__text{
-			text-align: right;
-			margin: 20% 40px 0 0;
+			@media(min-width: $screen-lg){
+				text-align: right;
+				margin: 20% 40px 0 0;
+			}
+		}
+		.brush-font{
+			@media(min-width: $screen-lg){
+				margin-right: 15px;
+			}
 		}
 	}
 	&__content-5{
@@ -221,8 +268,15 @@
 		}
 
 		.tab-item__text{
-			text-align: right;
-			margin: 40px 40px 0 0;
+			@media(min-width: $screen-lg){
+				text-align: right;
+				margin: 40px 40px 0 0;
+			}
+		}
+		.brush-font{
+			@media(min-width: $screen-lg){
+				margin-right: 25px;
+			}
 		}
 	}
 	
@@ -240,7 +294,16 @@
 		}
 
 		@media(max-width: $screen-lg-max){
-			margin: 20px 20px 0 0;
+			text-align: center;
+			margin: 20px 20px 0 20px;
+
+			.text-mobile{
+				display: block;
+				padding: 10px;
+				
+				line-height: 21px;
+				background-color: rgba($color-white, .5);
+			}
 		}
 		@media(min-width: $screen-lg){
 			font-size: 18px;
