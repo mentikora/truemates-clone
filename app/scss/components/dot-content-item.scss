@@ -18,7 +18,8 @@
 	}
 
 	.brush-font{
-		margin-top: 15px;
+		margin-bottom: 20px;
+		line-height: 30px;
 		
 		color: $color-primary;
 	}
@@ -26,8 +27,8 @@
 	.video-wrapper{
 		
 		&--vertical{
-			width: 296px;
-			height: 600px;
+			width: 245px;
+			height: 500px;
 
 			background: {
 				image: url('../dist/images/iphone.png');
@@ -37,9 +38,9 @@
 			}
 			
 			iframe{
-				width: 261px;
-		    height: 455px;
-		    margin-top: 71px;
+				width: 215px;
+		    height: 382px;
+		    margin-top: 58px;
 			}
 		}
 
@@ -94,7 +95,7 @@
 
 		margin: {
 			top: 0;
-			bottom: 10px;
+			bottom: 25px;
 		}
 	}
 
@@ -110,6 +111,8 @@
 			text-align: center;
 		}
 		@media(min-width: $screen-md){
+			margin-bottom: 50px;
+
 			font-size: 18px;
 			line-height: 30px;
 		}
