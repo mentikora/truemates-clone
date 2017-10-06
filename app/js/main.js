@@ -2,22 +2,27 @@ $(document).ready(function(){
 
 	'use strict';
 
-	// Vimeo.Player constructor
-	var iframe = document.querySelector('iframe');
-  var player = new Vimeo.Player(iframe);
+	var body = $('html,body');
 
   function pauseVideo(){
-  	player.pause();
+  	var active = $('.dot-content-item.active');
+		var iframe = active.find('iframe');
+		var player;
+
+		iframe.each(function(el){
+			player = new Vimeo.Player( $(iframe[el]) );
+			player.pause();
+		});
   }
 
 	// Smooth scrolling 
 	$('.navigation button').on('click', function(){
 		var scroll = $(this).data('scroll');
 
-		if(scroll != 0){
+		if(scroll){
 
-			$('html,body').animate({
-	    	scrollTop: $('' + scroll).offset().top
+			body.animate({
+	    	scrollTop: $(scroll).offset().top
 			}, 2000);		
 		}
 	});
@@ -66,16 +71,14 @@ $(document).ready(function(){
 		var currentSlideData = $('.portfolio-slider .slick-current').data('slide');
 		var activeDot = $('.dot-item.active');
 		var activeContent = $('.dot-content-item.active');
-		var iframe = activeContent.find('iframe');
-		var src = iframe.attr('src');
 
-		if(iframe){
-			iframe.attr('src', ' ');
-			iframe.attr('src', src);
-		}
 		activeDot.removeClass('active');
 		activeContent.removeClass('active').slideUp('100');
 		$('.dots-list[data-slide-dots="' + currentSlideData +'"]').addClass('active');
+	});
+
+	$('.slick-prev, .slick-next').on('click', function(){
+		pauseVideo();
 	});
 
 	// Dots
@@ -92,7 +95,7 @@ $(document).ready(function(){
 			dataItem.removeClass('active');
 		} else {
 			dataItem.addClass('active').slideDown(600);
-			$('html,body').animate({
+			body.animate({
 	    	scrollTop: $('.dot-content-item.active').offset().top
 			}, 500);
 
@@ -107,15 +110,14 @@ $(document).ready(function(){
 		var targetDot = $('.dot-item[data-dot="'+ parentData +'"]');
 		var iframe = parent.find('iframe');
 
-		if(parentData != undefined){
+		pauseVideo();
+
+		if(parentData){
 			targetDot.removeClass('active');	
 			parent.removeClass('active');
 		} else {
-			console.log(123);
 			parent.slideUp(400);
 		}
-
-		pauseVideo();
 		
 	});
 
