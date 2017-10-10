@@ -20,11 +20,12 @@ $(document).ready(function(){
 		var scroll = $(this).data('scroll');
 
 		if(scroll){
-
 			body.animate({
 	    	scrollTop: $(scroll).offset().top
 			}, 2000);		
 		}
+
+		$('.navigation--mobile').removeClass('active');
 	});
 
 	// Portfolio item, show list
@@ -44,7 +45,7 @@ $(document).ready(function(){
 
 	// Mobile menu button
 	$('.header__menu-button').on('click', function(){
-		$('.navigation--header').toggleClass('active');
+		$('.navigation--mobile').toggleClass('active');
 	});
 
 	// Portfolio slider
@@ -119,6 +120,12 @@ $(document).ready(function(){
 			parent.slideUp(400);
 		}
 		
+	});
+
+	$('.section-dots .dot-content-item__close').on('click', function(){
+		body.animate({
+    	scrollTop: $('.section-slider').offset().top
+		}, 500);
 	});
 
 	// Bookmarks

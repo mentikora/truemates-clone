@@ -30,6 +30,12 @@
 			}
 		}
 
+		&--t{
+			@media(min-width: $screen-md){
+				flex: 0 0 calc(100% / 3 - #{$gutter * 2});
+			}
+		}
+
 		/* item 50% on desktop */
 		&--h{
 			@media(max-width: $screen-md-max){

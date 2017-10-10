@@ -54,19 +54,7 @@
 		}
 	}
 
-	/* Modification => header */
-	&--header{
-		text-align: right;
-		float: right;
-
-		@media(min-width: $screen-md) and (max-width: $screen-xl-max){
-			li{
-				margin: {
-					left: 5px;
-					right: 5px;
-				}
-			}
-		}
+	&--mobile{
 		@media(max-width: $screen-lg-max){
 			opacity: 0;
 			visibility: hidden;
@@ -91,6 +79,32 @@
 			li{
 				display: block;
 			}
+			button:hover {
+				color: $color-primary;
+			}
+		}
+		@media(max-width: $screen-lg-max){
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+	}
+
+	/* Modification => header */
+	&--header{
+		text-align: right;
+		float: right;
+
+		@media(min-width: $screen-md) and (max-width: $screen-xl-max){
+			li{
+				margin: {
+					left: 5px;
+					right: 5px;
+				}
+			}
+		}
+		@media(max-width: $screen-lg-max){
+			display: none;
 		}
 		@media(min-width: $screen-lg){
 			margin: {

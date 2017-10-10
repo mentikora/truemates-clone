@@ -114,10 +114,18 @@
 
 		/* sOliver dots */ 
 		&--soliver-film{
-			background-image: url('../dist/images/soliver-circle-film.jpg');
+			background: {
+				image: url('../dist/images/soliver-circle-film.jpg');
+				size: 160px;
+        position: 65% top;
+			}
 		}
 		&--soliver-photo{
-			background-image: url('../dist/images/soliver-circle-photo.jpg');
+			background: {
+				image: url('../dist/images/soliver-circle-photo.jpg');
+				position: left -10px;
+				size: 95px;
+			}
 		}
 
 		/* vodafone dots */ 
